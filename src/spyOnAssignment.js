@@ -1,4 +1,4 @@
-export default spyOnAssignment(jasmine) {
+export default function spyOnAssignment(jasmine) {
     jasmine._assignmentSpies = [];
     jasmine.spyOnAssignment = (parent, objname, keysToSpyOn) => {
         const obj   = parent[objname]
