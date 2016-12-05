@@ -1,4 +1,4 @@
 export default function multilineDescription(jasmine) {
-    jasmine.mld = strs => strs[0].trim().replace(/\s{2,}/g, '');
+    jasmine.mld = strs => strs[0].trim().replace(/\s{2,}/g, ' ');
     return jasmine;
 }
