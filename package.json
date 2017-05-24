@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/cnordhougen/jasmine-extensions/issues"
   },
-  "homepage": "https://github.com/cnordhougen/jasmine-extensions#readme"
+  "homepage": "https://github.com/cnordhougen/jasmine-extensions#readme",
+  "devDependencies": {
+    "coding-style": "github:cnordhougen/coding-style"
+  }
 }

@@ -8,9 +8,16 @@ export default function DOMMatchers(jasmine) {
                             throw new TypeError(`toHaveTextContent() TypeError: ${typeof element} - ${element && element.constructor} (${expected})`);
                         }
 
-                        const actual  = element.textContent.trim().replace(/ {2,}/g, '')
-                            , pass    = actual === expected
-                            , message = `Expected "${actual}" ${pass ? 'to not' : 'to'} be "${expected}"`;
+                        const actual  = element.textContent.trim().replace(/ {2,}/g, '');
+                        let pass, message;
+
+                        if (expected instanceof RegExp) {
+                            pass = actual.match(expected);
+                            message = `Expected "${actual}" ${pass ? 'to not' : 'to'} match ${expected}`;
+                        } else {
+                            pass = actual === expected;
+                            message = `Expected "${actual}" ${pass ? 'to not' : 'to'} be "${expected}"`;
+                        }
 
                         return { pass, message };
                     }
