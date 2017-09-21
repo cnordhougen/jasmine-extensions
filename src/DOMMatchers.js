@@ -1,4 +1,4 @@
-export default function DOMMatchers(jasmine) {
+function DOMMatchers(jasmine) {
     beforeEach(() => {
         jasmine.addMatchers({
             toHaveTextContent() {
@@ -59,3 +59,5 @@ export default function DOMMatchers(jasmine) {
 
     return jasmine;
 }
+
+module.exports = DOMMatchers;

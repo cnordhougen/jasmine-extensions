@@ -1,6 +1,6 @@
-import DOMMatchers          from './src/DOMMatchers';
-import multilineDescription from './src/multilineDescription';
-import spyOnAssignment      from './src/spyOnAssignment';
+const DOMMatchers          = require('./src/DOMMatchers')
+    , multilineDescription = require('./src/multilineDescription')
+    , spyOnAssignment      = require('./src/spyOnAssignment');
 
 jasmine.use = (...fs) => fs.forEach(f => f(jasmine));
 
@@ -11,4 +11,4 @@ const jex = {
     spyOnAssignment,
 };
 
-export default jex;
+module.exports = jex;

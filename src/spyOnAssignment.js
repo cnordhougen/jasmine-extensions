@@ -1,4 +1,4 @@
-export default function spyOnAssignment(jasmine) {
+function spyOnAssignment(jasmine) {
     jasmine._assignmentSpies = [];
     jasmine.spyOnAssignment = (parent, objname, keysToSpyOn) => {
         const obj   = parent[objname]
@@ -111,3 +111,5 @@ export default function spyOnAssignment(jasmine) {
 
     return jasmine;
 }
+
+module.exports = spyOnAssignment;
